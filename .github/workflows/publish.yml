@@ -1,0 +1,42 @@
+name: Publish
+
+on:
+  push:
+    tags:
+      - v*
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    env:
+      DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true
+      DOTNET_CLI_TELEMETRY_OPTOUT: true
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup .NET 8.0
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 8.0.x
+
+    - name: Get the version
+      id: get_version
+      run: echo ::set-output name=VERSION::${GITHUB_REF#refs/tags/v}
+    
+    - name: Restore dependencies
+      run: dotnet restore AlexBocharov.Xml.sln
+
+    - name: Build
+      run: dotnet build AlexBocharov.Xml.sln --configuration Release --no-restore
+
+    - name: Test
+      run: dotnet test AlexBocharov.Xml.sln --no-restore --verbosity normal  
+
+    - name: Pack
+      run: dotnet pack AlexBocharov.Xml.sln --configuration Release --no-restore --no-build --output artifacts -p:Version=${{ steps.get_version.outputs.VERSION }}
+
+    - name: Publish on NuGet
+      run: dotnet nuget push artifacts/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate

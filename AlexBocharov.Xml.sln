@@ -1,0 +1,36 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{3B4A2D39-DA3C-4655-B5A6-2DDC0E583A81}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlexBocharov.Xml", "src\AlexBocharov.Xml\AlexBocharov.Xml.csproj", "{B4033B56-4050-4DDD-8EB3-D1BADB8A4181}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlexBocharov.Xml.Tests", "src\AlexBocharov.Xml.Tests\AlexBocharov.Xml.Tests.csproj", "{598CFB2F-D0DD-491F-B709-3717DB183E4C}"
+EndProject
+Global
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {097D8E33-D2B9-42D9-9D14-6B345BD478C5}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{598CFB2F-D0DD-491F-B709-3717DB183E4C} = {3B4A2D39-DA3C-4655-B5A6-2DDC0E583A81}
+		{B4033B56-4050-4DDD-8EB3-D1BADB8A4181} = {3B4A2D39-DA3C-4655-B5A6-2DDC0E583A81}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{598CFB2F-D0DD-491F-B709-3717DB183E4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{598CFB2F-D0DD-491F-B709-3717DB183E4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{598CFB2F-D0DD-491F-B709-3717DB183E4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{598CFB2F-D0DD-491F-B709-3717DB183E4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4033B56-4050-4DDD-8EB3-D1BADB8A4181}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4033B56-4050-4DDD-8EB3-D1BADB8A4181}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4033B56-4050-4DDD-8EB3-D1BADB8A4181}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4033B56-4050-4DDD-8EB3-D1BADB8A4181}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
