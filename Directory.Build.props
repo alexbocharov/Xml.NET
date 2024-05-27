@@ -1,11 +1,18 @@
 <Project>
 
   <PropertyGroup>
+    <Description>Xml.NET is an XML serialization library for .NET.</Description>
     <Copyright>Copyright © Alexander Bocharov</Copyright>
     <Authors>Alexander Bocharov</Authors>
     <Product>Xml.NET</Product>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/alexbocharov/Xml.NET</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/alexbocharov/Xml.NET</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <IsPackable>true</IsPackable>
+    <LangVersion>Latest</LangVersion>
     <WarnOnPackingNonPackableProject>false</WarnOnPackingNonPackableProject>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>

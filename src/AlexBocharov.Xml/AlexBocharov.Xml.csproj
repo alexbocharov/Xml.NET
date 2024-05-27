@@ -2,11 +2,14 @@
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-	  <IsPackable>true</IsPackable>
-	  <PackageTags>xml serialization</PackageTags>
-	  <Description>Xml.NET is an XML serialization library for .NET.</Description>
+	  <PackageTags>xml</PackageTags>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+    <None Include="..\..\LICENSE" Pack="true" PackagePath="\" />
+    <None Include="..\..\.editorconfig" Link=".editorconfig" />
+  </ItemGroup>
 
 </Project>
